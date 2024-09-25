@@ -21,13 +21,13 @@ int main(){
         if(vetor_a[i]==vetor_b[i])
             iguais++;
     }
-    for(int i=1;i<10;i++){
+    /*for(int i=1;i<10;i++){
         printf(" %d",vetor_a[i]);
     }
     printf("\n");
     for(int i=1;i<10;i++){
         printf(" %d",vetor_b[i]);
-    }
+    }*/
     
     if(iguais<9){
         printf("\nOs números não são uma permutação :(");
