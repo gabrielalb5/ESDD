@@ -3,7 +3,7 @@
 void bubble(int v[], int tamanho){
     int  continua, aux;
     int comparacoes = 0, trocas = 0;
-    printf("\nBUBBLE - ");
+    
     do{
         continua = 0;
         for(int i=0;i<tamanho-1;i++){
@@ -21,12 +21,10 @@ void bubble(int v[], int tamanho){
 }
 void selection(int v[], int tamanho){
     int i, j, pos_menor, aux;
-    int comparacoes = 0, trocas = 0;
-    printf("\nSELECTION - ");
+
     for(i=0; i<tamanho; i++){
         pos_menor = i;
         for(j=i+1; j<tamanho; j++){
-            comparacoes++;
             if(v[j] < v[pos_menor]){
                 pos_menor = j;
             }
@@ -34,13 +32,11 @@ void selection(int v[], int tamanho){
         aux = v[i];
         v[i] = v[pos_menor];
         v[pos_menor] = aux;
-        trocas++;
     }
-    printf("Comparações: %d | Trocas: %d", comparacoes, trocas);
 }
 void insertion(int v[], int tamanho){
    int i, j, aux;
-    printf("\nINSERT: ");
+
     for(i=1; i<tamanho; i++){
         aux = v[i];
         for(j = i-1; j >= 0 && v[j] > aux; j--){
