@@ -2,25 +2,31 @@
 
 void bubble(int v[], int tamanho){
     int  continua, aux;
-    printf("\n\nBUBBLE: ");
+    int comparacoes = 0, trocas = 0;
+    printf("\nBUBBLE - ");
     do{
         continua = 0;
         for(int i=0;i<tamanho-1;i++){
+            comparacoes++;
             if(v[i]>v[i+1]){
                 aux = v[i];
                 v[i] = v[i+1];
                 v[i+1] = aux;
                 continua=1;
+                trocas++; 
             }
         }
     }while(continua!=0);
+    printf("Comparações: %d | Trocas: %d\n", comparacoes, trocas);
 }
 void selection(int v[], int tamanho){
     int i, j, pos_menor, aux;
-    printf("\n\nSELECTION: ");
+    int comparacoes = 0, trocas = 0;
+    printf("\nSELECTION - ");
     for(i=0; i<tamanho; i++){
         pos_menor = i;
         for(j=i+1; j<tamanho; j++){
+            comparacoes++;
             if(v[j] < v[pos_menor]){
                 pos_menor = j;
             }
@@ -28,18 +34,28 @@ void selection(int v[], int tamanho){
         aux = v[i];
         v[i] = v[pos_menor];
         v[pos_menor] = aux;
+        trocas++;
     }
+    printf("Comparações: %d | Trocas: %d\n", comparacoes, trocas);
 }
 void insert(int v[], int tamanho){
     int i, j, aux;
-    printf("\n\nINSERT: ");
+    int comparacoes = 0, trocas = 0;
+    printf("\n\nINSERT - ");
     for(i=1; i<tamanho; i++){
         aux = v[i];
         for(j = i-1; j >= 0 && v[j] > aux; j--){
-            v[j+1] = v[j];
+            comparacoes++; 
+            if (v[j] > aux) {
+                v[j + 1] = v[j];
+                trocas++;
+            } else {
+                break;
+            }
         }
         v[j+1] = aux;
     }
+    printf("Comparações: %d | Trocas: %d\n", comparacoes, trocas);
 
 }
 void merge(int v[], int inicio, int fim, int tamanho){
@@ -58,7 +74,10 @@ void intercala(int v[], int inicio, int fim, int meio, int tamanho){
 	inicio_arquivo1 = inicio;
 	inicio_arquivo2 = meio + 1;
 	pos_livre = inicio;
+    int comparacoes = 0, trocas = 0;
+
 	while(inicio_arquivo1 <= meio && inicio_arquivo2 <= fim){
+        comparacoes++;
 		if(v[inicio_arquivo1] <= v[inicio_arquivo2]){
 			arquivo_aux[pos_livre] = v[inicio_arquivo1];
 			inicio_arquivo1 += 1;
@@ -78,7 +97,9 @@ void intercala(int v[], int inicio, int fim, int meio, int tamanho){
 	}
 	for(i=inicio; i <= fim; i++){
 		v[i] = arquivo_aux[i];
+        trocas++;
 	}
+    printf("Comparações: %d | Trocas: %d\n", comparacoes, trocas);
 }
 
 void quick(int v[], int lb, int ub){
@@ -108,6 +129,7 @@ void quick(int v[], int lb, int ub){
 void partition(int v[], int lb, int ub, int *j){
 
     int a, down, up, temp;
+    int comparacoes = 0, trocas = 0;
     
     /*
      * a é o elemento cuja posição 
@@ -127,20 +149,25 @@ void partition(int v[], int lb, int ub, int *j){
              * Sobe no vetor
              */
             down++;
+            comparacoes++; 
         }
         while(v[up] > a){
             /*
              * Desce no vetor
              */
             up--;
+            comparacoes++; 
         }
         if(down < up){
             temp = v[down];
             v[down] = v[up];
             v[up] = temp;
+            trocas++; 
         }
     }
     v[lb] = v[up];
     v[up] = a;
     *j = up;
+    trocas++;
+    printf("Comparações: %d | Trocas: %d\n", comparacoes, trocas);
 }

@@ -1,48 +1,30 @@
 #include "lib.h"
 
-void melhor(){
-    printf("MELHOR CASO - VETORES ORDENADOS\n\n");
-
-    //1000 ordenados
-    int tamanho = 1000;
-    int a[tamanho];
-    int a_aux[tamanho];
-    crescente(a,tamanho);
-    copia_vetor(a_aux,a,tamanho);
-
-    printf("Mil elementos\n");
-
-    casos(a,a_aux,tamanho);
+void melhor(tamanho){
+    int v[tamanho];
+    int v_aux[tamanho];
+    crescente(v,tamanho);
+    copia_vetor(v_aux,v,tamanho);
+    printf("%d elementos\n",tamanho);
+    casos(v,v_aux,tamanho);
 }
 
-void medio(){
-    printf("CASO MÉDDIO - VETORES ALEATÓRIOS\n\n");
-
-    //1000 aleatorios
-    int tamanho = 1000;
-    int a[tamanho];
-    int a_aux[tamanho];
-    aleatorio(a,tamanho,5);
-    copia_vetor(a_aux,a,tamanho);
-    
-    printf("Mil elementos\n");
-
-    casos(a,a_aux,tamanho);
+void medio(tamanho){
+    int v[tamanho];
+    int v_aux[tamanho];
+    aleatorio(v,tamanho,5);
+    copia_vetor(v_aux,v,tamanho);
+    printf("%d elementos\n",tamanho);
+    casos(v,v_aux,tamanho);
 }
 
-void pior(){
-    printf("PIOR CASO - VETORES INVERTIDOS\n\n");
-
-    //1000 invertidos
-    int tamanho = 1000;
-    int a[tamanho];
-    int a_aux[tamanho];
-    decrescente(a,tamanho);
-    copia_vetor(a_aux,a,tamanho);
-    
-    printf("Mil elementos\n");
-
-    casos(a,a_aux,tamanho);
+void pior(tamanho){
+    int v[tamanho];
+    int v_aux[tamanho];
+    decrescente(v,tamanho);
+    copia_vetor(v_aux,v,tamanho);
+    printf("%d elementos\n",tamanho);
+    casos(v,v_aux,tamanho);
 }
 
 void casos(int v[], int v_aux[], int tamanho){

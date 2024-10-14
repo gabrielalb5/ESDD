@@ -14,8 +14,8 @@ void crescente(int v[], int tamanho);
 void aleatorio(int v[], int tamanho, int qtd_digitos);
 void decrescente(int v[], int tamanho);
 
-void melhor();
-void medio();
-void pior();
+void melhor(int tamanho);
+void medio(int tamanho);
+void pior(int tamanho);
 
 void casos(int v[], int v_aux[], int tamanho);
