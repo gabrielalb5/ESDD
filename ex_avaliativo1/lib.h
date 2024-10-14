@@ -3,7 +3,7 @@
 
 void bubble(int v[], int tamanho);
 void selection(int v[], int tamanho);
-void insert(int v[], int tamanho);
+void insertion(int v[], int tamanho);
 void merge(int v[], int inicio, int fim, int tamanho);
 void intercala(int v[], int inicio, int fim, int meio, int tamanho);
 void quick(int v[], int lb, int ub);
