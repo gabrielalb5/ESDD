@@ -4,7 +4,7 @@
 
 #define MAX 1500
 
-int main(){
+/*int main(){
     clock_t start, end;
     double cpu_time_used;
 
@@ -34,4 +34,4 @@ int main(){
     printf("\nTempo de execução: %f segundos. \n", cpu_time_used);
 
     return 0;
-}
+}*/
