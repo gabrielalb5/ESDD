@@ -2,7 +2,7 @@
 
 void bubble(int v[], int tamanho){
     int  continua, aux;
-    long int comparacoes = 0, trocas = 0;
+    long long int comparacoes = 0, trocas = 0;
     
     do{
         continua = 0;
@@ -17,12 +17,12 @@ void bubble(int v[], int tamanho){
             }
         }
     }while(continua!=0);
-    printf("COMP: %d | TROCAS: %d", comparacoes, trocas);
+    printf("COMP: %d | TROCAS: %lld", comparacoes, trocas);
 }
 
 void insertion(int v[], int tamanho){
    int i, j, aux;
-   long int comparacoes = 0, trocas = 0;
+   long long int comparacoes = 0, trocas = 0;
 
     for(i=1; i<tamanho; i++){
         aux = v[i];
@@ -33,12 +33,12 @@ void insertion(int v[], int tamanho){
         comparacoes++;
         v[j+1] = aux;
     }
-    printf("COMP: %d | TROCAS: %d", comparacoes, trocas);
+    printf("COMP: %d | TROCAS: %lld", comparacoes, trocas);
 }
 
 void selection(int v[], int tamanho){
     int i, j, pos_menor, aux;
-    long int comparacoes = 0, trocas = 0;
+    long long int comparacoes = 0, trocas = 0;
 
     for(i=0; i<tamanho; i++){
         pos_menor = i;
@@ -53,7 +53,7 @@ void selection(int v[], int tamanho){
         v[pos_menor] = aux;
         trocas++;
     }
-    printf("COMP: %d | TROCAS: %d", comparacoes, trocas);
+    printf("COMP: %d | TROCAS: %lld", comparacoes, trocas);
 }
 void merge(int v[], int inicio, int fim, int tamanho){
     int meio;
