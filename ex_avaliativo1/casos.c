@@ -1,6 +1,6 @@
 #include "lib.h"
 
-void melhor(tamanho){
+void melhor(int tamanho){
     int v[tamanho];
     int v_aux[tamanho];
     crescente(v,tamanho);
@@ -9,7 +9,7 @@ void melhor(tamanho){
     casos(v,v_aux,tamanho);
 }
 
-void medio(tamanho){
+void medio(int tamanho){
     int v[tamanho];
     int v_aux[tamanho];
     aleatorio(v,tamanho,5);
@@ -18,7 +18,7 @@ void medio(tamanho){
     casos(v,v_aux,tamanho);
 }
 
-void pior(tamanho){
+void pior(int tamanho){
     int v[tamanho];
     int v_aux[tamanho];
     decrescente(v,tamanho);
@@ -41,15 +41,6 @@ void casos(int v[], int v_aux[], int tamanho){
     printf(" (%f segundos)", cpu_time_used);
     copia_vetor(v,v_aux,tamanho);
 
-    printf("\nSELECTION - ");
-    start = clock();
-    selection(v,tamanho);
-    //imprimir_vetor(v,tamanho);
-    end = clock();
-    cpu_time_used = (  (double)(end - start) / CLOCKS_PER_SEC );
-    printf(" (%f segundos)", cpu_time_used);
-    copia_vetor(v,v_aux,tamanho);
-
     printf("\nINSERTION - ");
     start = clock();
     insertion(v,tamanho);
@@ -58,10 +49,19 @@ void casos(int v[], int v_aux[], int tamanho){
     cpu_time_used = (  (double)(end - start) / CLOCKS_PER_SEC );
     printf(" (%f segundos)", cpu_time_used);
     copia_vetor(v,v_aux,tamanho);
+
+    printf("\nSELECTION - ");
+    start = clock();
+    selection(v,tamanho);
+    //imprimir_vetor(v,tamanho);
+    end = clock();
+    cpu_time_used = (  (double)(end - start) / CLOCKS_PER_SEC );
+    printf(" (%f segundos)", cpu_time_used);
+    copia_vetor(v,v_aux,tamanho);
     
     printf("\nMERGE - ");
     start = clock();
-    merge(v,0,tamanho-1,tamanho);
+    //merge(v,0,tamanho-1,tamanho);
     //imprimir_vetor(v,tamanho);
     end = clock();
     cpu_time_used = (  (double)(end - start) / CLOCKS_PER_SEC );
@@ -70,7 +70,7 @@ void casos(int v[], int v_aux[], int tamanho){
 
     printf("\nQUICK - ");
     start = clock();
-    quick(v,0,tamanho-1);
+    //quick(v,0,tamanho-1);
     //imprimir_vetor(v,tamanho);
     end = clock();
     cpu_time_used = (  (double)(end - start) / CLOCKS_PER_SEC );
