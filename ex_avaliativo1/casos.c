@@ -39,6 +39,7 @@ void casos(int v[], int v_aux[], int tamanho){
     end = clock();
     cpu_time_used = (  (double)(end - start) / CLOCKS_PER_SEC );
     printf(" (%f segundos)", cpu_time_used);
+    
     copia_vetor(v,v_aux,tamanho);
 
     printf("\nINSERTION - ");
@@ -48,6 +49,7 @@ void casos(int v[], int v_aux[], int tamanho){
     end = clock();
     cpu_time_used = (  (double)(end - start) / CLOCKS_PER_SEC );
     printf(" (%f segundos)", cpu_time_used);
+    
     copia_vetor(v,v_aux,tamanho);
 
     printf("\nSELECTION - ");
@@ -57,6 +59,7 @@ void casos(int v[], int v_aux[], int tamanho){
     end = clock();
     cpu_time_used = (  (double)(end - start) / CLOCKS_PER_SEC );
     printf(" (%f segundos)", cpu_time_used);
+    
     copia_vetor(v,v_aux,tamanho);
     
     printf("\nMERGE - ");
@@ -66,6 +69,7 @@ void casos(int v[], int v_aux[], int tamanho){
     end = clock();
     cpu_time_used = (  (double)(end - start) / CLOCKS_PER_SEC );
     printf(" (%f segundos)", cpu_time_used);
+    
     copia_vetor(v,v_aux,tamanho);
 
     printf("\nQUICK - ");
@@ -75,7 +79,6 @@ void casos(int v[], int v_aux[], int tamanho){
     end = clock();
     cpu_time_used = (  (double)(end - start) / CLOCKS_PER_SEC );
     printf(" (%f segundos)", cpu_time_used);
-    copia_vetor(v,v_aux,tamanho);
 
     printf("\n\n");
 }
