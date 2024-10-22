@@ -1,30 +1,36 @@
 #include "lib.h"
 
 void melhor(int tamanho){
-    int v[tamanho];
-    int v_aux[tamanho];
+    int *v = (int *)malloc(tamanho * sizeof(int));
+    int *v_aux = (int *)malloc(tamanho * sizeof(int));
     crescente(v,tamanho);
     copia_vetor(v_aux,v,tamanho);
     printf("%d elementos",tamanho);
     casos(v,v_aux,tamanho);
+    free(v);
+    free(v_aux);
 }
 
 void medio(int tamanho){
-    int v[tamanho];
-    int v_aux[tamanho];
+    int *v = (int *)malloc(tamanho * sizeof(int));
+    int *v_aux = (int *)malloc(tamanho * sizeof(int));
     aleatorio(v,tamanho,5);
     copia_vetor(v_aux,v,tamanho);
     printf("%d elementos",tamanho);
     casos(v,v_aux,tamanho);
+    free(v);
+    free(v_aux);
 }
 
 void pior(int tamanho){
-    int v[tamanho];
-    int v_aux[tamanho];
+    int *v = (int *)malloc(tamanho * sizeof(int));
+    int *v_aux = (int *)malloc(tamanho * sizeof(int));
     decrescente(v,tamanho);
     copia_vetor(v_aux,v,tamanho);
     printf("%d elementos",tamanho);
     casos(v,v_aux,tamanho);
+    free(v);
+    free(v_aux);
 }
 
 void casos(int v[], int v_aux[], int tamanho){

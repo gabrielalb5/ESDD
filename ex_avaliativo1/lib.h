@@ -1,5 +1,6 @@
 #include <time.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 void bubble(int v[], int tamanho);
 void selection(int v[], int tamanho);
@@ -19,3 +20,4 @@ void medio(int tamanho);
 void pior(int tamanho);
 
 void casos(int v[], int v_aux[], int tamanho);
+void copia_vetor(int destino[], int origem[], int tamanho);
