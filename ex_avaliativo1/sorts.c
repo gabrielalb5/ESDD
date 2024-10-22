@@ -17,7 +17,7 @@ void bubble(int v[], int tamanho){
             }
         }
     }while(continua!=0);
-    printf("COMP: %d | TROCAS: %lld", comparacoes, trocas);
+    printf("COMP: %lld | TROCAS: %lld", comparacoes, trocas);
 }
 
 void insertion(int v[], int tamanho){
@@ -33,7 +33,7 @@ void insertion(int v[], int tamanho){
         comparacoes++;
         v[j+1] = aux;
     }
-    printf("COMP: %d | TROCAS: %lld", comparacoes, trocas);
+    printf("COMP: %lld | TROCAS: %lld", comparacoes, trocas);
 }
 
 void selection(int v[], int tamanho){
@@ -53,19 +53,19 @@ void selection(int v[], int tamanho){
         v[pos_menor] = aux;
         trocas++;
     }
-    printf("COMP: %d | TROCAS: %lld", comparacoes, trocas);
+    printf("COMP: %lld | TROCAS: %lld", comparacoes, trocas);
 }
-void merge(int v[], int inicio, int fim, int tamanho){
+void merge(int v[], int inicio, int fim, int tamanho, int *merge_comp, int *merge_troca){
     int meio;
 	if(inicio < fim){
 		meio = (inicio + fim) / 2;
-		merge(v, inicio, meio, tamanho);
-		merge(v, meio+1, fim, tamanho);
-		intercala(v, inicio, fim, meio, tamanho);
+		merge(v, inicio, meio, tamanho, merge_comp, merge_troca);
+		merge(v, meio+1, fim, tamanho, merge_comp, merge_troca);
+		intercala(v, inicio, fim, meio, tamanho, merge_comp, merge_troca);
 	}
 }
 
-void intercala(int v[], int inicio, int fim, int meio, int tamanho){
+void intercala(int v[], int inicio, int fim, int meio, int tamanho, int *merge_comp, int *merge_troca){
 	int pos_livre, inicio_arquivo1, inicio_arquivo2, i;
 	int arquivo_aux[tamanho];
 	inicio_arquivo1 = inicio;
@@ -73,6 +73,7 @@ void intercala(int v[], int inicio, int fim, int meio, int tamanho){
 	pos_livre = inicio;
 
 	while(inicio_arquivo1 <= meio && inicio_arquivo2 <= fim){
+        (*merge_comp)++;
 		if(v[inicio_arquivo1] <= v[inicio_arquivo2]){
 			arquivo_aux[pos_livre] = v[inicio_arquivo1];
 			inicio_arquivo1 += 1;
@@ -86,12 +87,15 @@ void intercala(int v[], int inicio, int fim, int meio, int tamanho){
 	}
 	for(i=inicio_arquivo1; i<= meio; i++, pos_livre++){
 		arquivo_aux[pos_livre] = v[i];
+        (*merge_troca)++;
 	}
 	for(i=inicio_arquivo2; i<= fim; i++, pos_livre++){
 		arquivo_aux[pos_livre] = v[i];
+        (*merge_troca)++;
 	}
 	for(i=inicio; i <= fim; i++){
 		v[i] = arquivo_aux[i];
+        (*merge_troca)++;
 	}
 }
 
