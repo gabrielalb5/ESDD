@@ -94,6 +94,7 @@ void intercala(int v[], int inicio, int fim, int meio, int tamanho, long long in
 	}
 	for(i=inicio; i <= fim; i++){
 		v[i] = arquivo_aux[i];
+        (*ptr_merge_troca)++;
 	}
 }
 
