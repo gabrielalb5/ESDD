@@ -5,8 +5,8 @@
 void bubble(int v[], int tamanho);
 void selection(int v[], int tamanho);
 void insertion(int v[], int tamanho);
-void merge(int v[], int inicio, int fim, int tamanho, int *merge_comp, int *merge_troca);
-void intercala(int v[], int inicio, int fim, int meio, int tamanho, int *merge_comp, int *merge_troca);
+void merge(int v[], int inicio, int fim, int tamanho, long long int *ptr_merge_comp, long long int *ptr_merge_troca);
+void intercala(int v[], int inicio, int fim, int meio, int tamanho,  long long int *ptr_merge_comp, long long int *ptr_merge_troca);
 void quick(int v[], int lb, int ub);
 void partition(int v[], int lb, int ub, int *j);
 
