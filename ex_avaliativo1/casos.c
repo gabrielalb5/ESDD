@@ -73,7 +73,7 @@ void casos(int v[], int v_aux[], int tamanho){
     printf("\nMERGE - ");
     start = clock();
     merge(v,0,tamanho-1,tamanho,ptr_merge_comp,ptr_merge_troca);
-    imprimir_vetor(v,tamanho);
+    //imprimir_vetor(v,tamanho);
     end = clock();
     cpu_time_used = (  (double)(end - start) / CLOCKS_PER_SEC );
     printf("COMP: %lld | TROCAS: %lld\n", merge_comp, merge_troca);

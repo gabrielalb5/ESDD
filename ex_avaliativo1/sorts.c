@@ -82,20 +82,18 @@ void intercala(int v[], int inicio, int fim, int meio, int tamanho, long long in
 		{
 			arquivo_aux[pos_livre] = v[inicio_arquivo2];
 			inicio_arquivo2 += 1;
+            (*ptr_merge_troca)++;
 		}
 		pos_livre += 1;
 	}
 	for(i=inicio_arquivo1; i<= meio; i++, pos_livre++){
 		arquivo_aux[pos_livre] = v[i];
-        (*ptr_merge_troca)++;
 	}
 	for(i=inicio_arquivo2; i<= fim; i++, pos_livre++){
 		arquivo_aux[pos_livre] = v[i];
-        (*ptr_merge_troca)++;
 	}
 	for(i=inicio; i <= fim; i++){
 		v[i] = arquivo_aux[i];
-        (*ptr_merge_troca)++;
 	}
 }
 
