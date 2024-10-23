@@ -98,31 +98,34 @@ void intercala(int v[], int inicio, int fim, int meio, int tamanho, long long in
 	}
 }
 
-void quick(int v[], int lb, int ub){
+void quick(int v[], int lb, int ub, long long int *ptr_merge_comp, long long int *ptr_merge_troca){
 
     int j = -1;
 
     if(lb >= ub)
         return;                     /* Vetor está classificado */
 
-    partition(v, lb, ub, &j);       /* Particiona os elementos do subvetor
+    partition(v, lb, ub, &j, ptr_merge_comp, ptr_merge_troca);
+                                    /* Particiona os elementos do subvetor
                                      * de modo que um dos elementos seja alocado
                                      * em sua posição correta. A variável j é a
                                      * posição onde este elemento foi alocada
                                      */
 
-    quick(v, lb, j-1);          /* Classifica de forma recursiva o subvetor
+    quick(v, lb, j-1, ptr_merge_comp, ptr_merge_troca);
+                                    /* Classifica de forma recursiva o subvetor
                                      * entre a posição lb e j-1
                                      */
 
-    quick(v, j+1, ub);          /* Classifica de forma recursiva o subvetor
+    quick(v, j+1, ub, ptr_merge_comp, ptr_merge_troca);
+                                    /* Classifica de forma recursiva o subvetor
                                      * entre a posição j+1 e ub
                                      */
 
 }
 
 
-void partition(int v[], int lb, int ub, int *j){
+void partition(int v[], int lb, int ub, int *j, long long int *ptr_merge_comp, long long int *ptr_merge_troca){
 
     int a, down, up, temp;
     
@@ -144,17 +147,20 @@ void partition(int v[], int lb, int ub, int *j){
              * Sobe no vetor
              */
             down++;
+            (*ptr_merge_comp)++;
         }
         while(v[up] > a){
             /*
              * Desce no vetor
              */
             up--;
+            (*ptr_merge_comp)++;
         }
         if(down < up){
             temp = v[down];
             v[down] = v[up];
             v[up] = temp;
+            (*ptr_merge_troca)++;
         }
     }
     v[lb] = v[up];
