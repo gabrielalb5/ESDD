@@ -36,12 +36,12 @@ void pior(int tamanho){
 void casos(int v[], int v_aux[], int tamanho){
     clock_t start, end;
     double cpu_time_used;
-    long long int merge_comp = 0, merge_troca = 0, quick_comp, quick_troca;
+    long long int merge_comp = 0, merge_troca = 0, quick_comp = 0, quick_troca = 0;
     long long int *ptr_merge_comp = &merge_comp, *ptr_merge_troca = &merge_troca;
     long long int *ptr_quick_comp = &quick_comp, *ptr_quick_troca = &quick_troca;
     //imprimir_vetor(v,tamanho);
 
-    /*printf("\nBUBBLE - ");
+    printf("\nBUBBLE - ");
     start = clock();
     bubble(v,tamanho);
     //imprimir_vetor(v,tamanho);
@@ -78,7 +78,7 @@ void casos(int v[], int v_aux[], int tamanho){
     end = clock();
     cpu_time_used = (  (double)(end - start) / CLOCKS_PER_SEC );
     printf("COMP: %lld | TROCAS: %lld", merge_comp, merge_troca);
-    printf(" (%f segundos)", cpu_time_used);*/
+    printf(" (%f segundos)", cpu_time_used);
     
     copia_vetor(v,v_aux,tamanho);
 
