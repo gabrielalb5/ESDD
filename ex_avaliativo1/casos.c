@@ -40,7 +40,7 @@ void casos(int v[], int v_aux[], int tamanho){
     long long int *ptr_merge_comp = &merge_comp, *ptr_merge_troca = &merge_troca;
     long long int *ptr_quick_comp = &quick_comp, *ptr_quick_troca = &quick_troca;
 
-    /*printf("\nBUBBLE - ");
+    printf("\nBUBBLE - ");
     start = clock();
     bubble(v,tamanho);
     end = clock();
@@ -65,7 +65,7 @@ void casos(int v[], int v_aux[], int tamanho){
     cpu_time_used = (  (double)(end - start) / CLOCKS_PER_SEC );
     printf(" (%f segundos)", cpu_time_used);
     
-    copia_vetor(v,v_aux,tamanho);*/
+    copia_vetor(v,v_aux,tamanho);
     
     printf("\nMERGE - ");
     start = clock();

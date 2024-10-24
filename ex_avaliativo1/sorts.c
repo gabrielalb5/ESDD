@@ -133,7 +133,7 @@ void partition(int v[], int lb, int ub, int *j, long long int *ptr_quick_comp, l
      * a é o elemento cuja posição 
      * final é procurada (pivô)
      */
-    a = v[lb];
+    a = v[(lb+ub)/2];
 
     /*
      * Inicialização dos ponteiros
