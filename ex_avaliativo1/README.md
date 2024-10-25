@@ -292,7 +292,7 @@ A variação utilizada nesse algoritmo de troca é a melhorada. Ele apresenta um
 O insertion sort apresenta um desempenho melhor em comparação ao bubble sort, obtendo resultados em até **menos da metade do tempo**. Ele segue um padrão de comparação de `n-1`, zero trocas para vetores ordenados e `(n(n-1))/2` para vetores invertidos.
 
 ### Selection sort
-O **pior** resultado de **tempo** para **vetores ordenados** e também para **vetores pequenos**. Seu tempo de resposta é muito semelhante independente do caso, mudando apenas com a variação de tamanho de vetor e segue o mesmo padrão para todos os casos: `(n(n-1))/2` comparações e `n` trocas.
+O **pior** resultado de **tempo** para **vetores ordenados** e também para **vetores pequenos**. Seu tempo de resposta é muito semelhante independente do caso, mudando apenas com a variação de tamanho do vetor e segue o mesmo padrão para todos os casos: `(n(n-1))/2` comparações e `n` trocas.
 
 ### Merge sort
 Esse tipo de ordenação é **um dos mais rápidos**. O merge sort apresenta o conceito de recurividade e cumpre muito bem seu papel. Entretanto, há uma certa **dificuldade em contabilizar as trocas** quando não é definido exatamente o que é considerado troca. Nesse algoritmo há diversas divisões em outros vetores menores que entram na contagem final, incluindo em vetores já ordenados.
