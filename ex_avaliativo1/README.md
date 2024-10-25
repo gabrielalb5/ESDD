@@ -3,7 +3,7 @@
 
 Essa pesquisa faz parte da disciplina de Estrutura de Dados e objetiva demonstrar o desempenho de algoritmos de ordenação, semelhante ao trabalho desenvolvido por Souza, Ricarte e de Almeida Lima (2017).
 
-Nove casos foram propostos. Foi necessário utilizar 3 tipos de vetores: ordenados, invertidos e aleatórios (melhor, pior e médio caso respectivamente). O tamanho dos vetores para teste foram de mil, 100 mil e 1 milhão de elementos.
+Nove casos foram propostos. Foi necessário utilizar 3 tipos de vetores: ordenados, invertidos e aleatórios (melhor, pior e médio caso respectivamente). Os tamanhos dos vetores para teste foram definidos em mil, 100 mil e 1 milhão de elementos.
 
 A partir disso, implementei um programa em C com base nos códigos  de ordenação disponibilizados pelo professor [Ednilson](https://github.com/ednilsonrossi), com o acréscimo de contadores de comparações, trocas e tempo de execução, além de adaptações para permitir a execução no Windows manipulando a memória Heap.
 
@@ -295,7 +295,7 @@ O insertion sort apresenta um desempenho melhor em comparação ao bubble sort, 
 O **pior** resultado de **tempo** para **vetores ordenados** e também para **vetores pequenos**. Seu tempo de resposta é muito semelhante independente do caso, mudando apenas com a variação de tamanho do vetor e segue o mesmo padrão para todos os casos: `(n(n-1))/2` comparações e `n` trocas.
 
 ### Merge sort
-Esse tipo de ordenação é **um dos mais rápidos**. O merge sort apresenta o conceito de recurividade e cumpre muito bem seu papel. Entretanto, há uma certa **dificuldade em contabilizar as trocas** quando não é definido exatamente o que é considerado troca. Nesse algoritmo há diversas divisões em outros vetores menores que entram na contagem final, incluindo em vetores já ordenados.
+Esse tipo de ordenação é **um dos mais rápidos**. O merge sort apresenta o conceito de recursividade e cumpre muito bem seu papel. Entretanto, há uma certa **dificuldade em contabilizar as trocas** quando não é definido exatamente o que é considerado troca. Nesse algoritmo há diversas divisões em outros vetores menores que entram na contagem final, incluindo em vetores já ordenados.
 
 ### Quick sort
 Condizente com o nome, esse é o algoritmo com o **melhor tempo** de resposta. Ele também apresenta o conceito de recursividade como no merge e é ideal para grandes conjuntos de dados, como pode ser visto no comparativo.
