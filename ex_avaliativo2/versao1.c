@@ -3,8 +3,6 @@
 #include <time.h>
 
 #define TAM 1000000
-#define TAM_INDEX1 1000
-#define TAM_INDEX2 10
 
 void gerarCrescente(int valor_inicial, int v[]);
 void imprimirVetor(int v[], int tamanho);
@@ -12,19 +10,19 @@ void dividirVetor(int v[], int posicoes[], int vIndex[], int vValues[], int inte
 
 int main() {
     int v[TAM];
-    int v1Index[TAM_INDEX1];
-    int v1Values[TAM_INDEX1];
-    int v2Index[TAM_INDEX2];
-    int v2Values[TAM_INDEX2];
+    int v1Index[1000];
+    int v1Values[1000];
+    int v2Index[100];
+    int v2Values[100];
     // VETOR ALEATÓRIO
     //srand((unsigned) time(NULL));
     // VETOR COM SEED
     srand(1);
     gerarCrescente(1, v);
-    dividirVetor(v, v, v1Index, v1Values, TAM, TAM_INDEX1);
-    imprimirVetor(v1Index, TAM_INDEX1);
-    dividirVetor(v1Index, v1Values, v2Index, v2Values, TAM_INDEX1, 100);
-    imprimirVetor(v2Index, TAM_INDEX2);
+    dividirVetor(v, v, v1Index, v1Values, TAM, 1000);
+    imprimirVetor(v1Index, 1000);
+    dividirVetor(v1Index, v1Values, v2Index, v2Values, 1000, 100);
+    imprimirVetor(v2Index, 10);
     return 0;
 }
 
