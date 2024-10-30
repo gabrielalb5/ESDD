@@ -7,21 +7,20 @@ int main() {
     int tabela1[1000][2];
     int tabela2[100][2];
     int inicioFim[2][2];
-
     clock_t start, end;
     double cpu_time_used;
     
-    printf("Digite o número procurado: ");
-    scanf("%d",&procurado);
-    
+    srand(1);
     gerarCrescente(1, original, ELEMENTOS);
-    
     dividirTabela(original, tabela1, ELEMENTOS, 1000);
     dividirTabela(tabela1, tabela2, 1000, 100);
+    
+    printf("Digite o número procurado: ");
+    scanf("%d",&procurado);
 
     start = clock();
-    primeiraBusca(tabela2,10,procurado,inicioFim);
-    segundaBusca(tabela1,procurado,inicioFim); 
+    busca(tabela2,10,procurado,inicioFim);
+    busca(tabela1,1000,procurado,inicioFim); 
     achou = buscaSequencial(procurado,original,inicioFim);
     end = clock();
     
