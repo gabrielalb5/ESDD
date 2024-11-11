@@ -1,5 +1,4 @@
-
-# Comparativo de desempenho de algoritmos de ordenação em C
+# 📋 Comparativo de desempenho de algoritmos de ordenação em C
 
 Essa pesquisa faz parte da disciplina de Estrutura de Dados e objetiva demonstrar o desempenho de algoritmos de ordenação, semelhante ao trabalho desenvolvido por Souza, Ricarte e de Almeida Lima (2017).
 
@@ -7,10 +6,10 @@ Nove casos foram propostos. Foi necessário utilizar 3 tipos de vetores: ordenad
 
 A partir disso, implementei um programa em C com base nos códigos  de ordenação disponibilizados pelo professor [Ednilson](https://github.com/ednilsonrossi), com o acréscimo de contadores de comparações, trocas e tempo de execução, além de adaptações para permitir a execução no Windows manipulando a memória Heap.
 
-Dessa forma, apliquei para cada um dos tamanhos de vetor um teste que executava cada um dos casos (melhor, pior e médio) três vezes e anotei as médias que estão dispostas nas tabelas a seguir.
+Dessa forma, apliquei para cada um dos tamanhos de vetor um teste que executava cada um dos casos (melhor, pior e médio) três vezes e anotei as médias que estão dispostas nas [tabelas](#%EF%B8%8F-comparativo) a seguir.
 
-## Comparativo
-### Resultado médio de testes
+## ⚖️ Comparativo
+Resultado médio de testes com mil, 100 mil e 1 milhão de elementos com casos de vetores ordenados, invertidos e aleatórios.
 <table>
   <thead>
     <tr>
@@ -28,13 +27,13 @@ Dessa forma, apliquei para cada um dos tamanhos de vetor um teste que executava 
         <td></td>
         <td>COMPARAÇÕES</td>
         <td>TROCAS</td>
-        <td>TEMPO</td>
+        <td>TEMPO (segundos)</td>
         <td>COMPARAÇÕES</td>
         <td>TROCAS</td>
-        <td>TEMPO</td>
+        <td>TEMPO (segundos)</td>
         <td>COMPARAÇÕES</td>
         <td>TROCAS</td>
-        <td>TEMPO</td>
+        <td>TEMPO (segundos)</td>
     </tr>
     <tr>
         <td>BUBBLE</td>
@@ -116,13 +115,13 @@ Dessa forma, apliquei para cada um dos tamanhos de vetor um teste que executava 
         <td></td>
         <td>COMPARAÇÕES</td>
         <td>TROCAS</td>
-        <td>TEMPO</td>
+        <td>TEMPO (segundos)</td>
         <td>COMPARAÇÕES</td>
         <td>TROCAS</td>
-        <td>TEMPO</td>
+        <td>TEMPO (segundos)</td>
         <td>COMPARAÇÕES</td>
         <td>TROCAS</td>
-        <td>TEMPO</td>
+        <td>TEMPO (segundos)</td>
     </tr>
     <tr>
         <td>BUBBLE</td>
@@ -204,13 +203,13 @@ Dessa forma, apliquei para cada um dos tamanhos de vetor um teste que executava 
         <td></td>
         <td>COMPARAÇÕES</td>
         <td>TROCAS</td>
-        <td>TEMPO</td>
+        <td>TEMPO (segundos)</td>
         <td>COMPARAÇÕES</td>
         <td>TROCAS</td>
-        <td>TEMPO</td>
+        <td>TEMPO (segundos)</td>
         <td>COMPARAÇÕES</td>
         <td>TROCAS</td>
-        <td>TEMPO</td>
+        <td>TEMPO (segundos)</td>
     </tr>
      <tr>
         <td>BUBBLE</td>
@@ -276,7 +275,7 @@ Dessa forma, apliquei para cada um dos tamanhos de vetor um teste que executava 
 </table>
 
 ### Gráficos
-#### Tempo de execução X Quantidade de elementos
+Tempo de execução X Quantidade de elementos
 <div style="display: flex">
 <img src="https://github.com/user-attachments/assets/d824395d-cada-4a43-8e3a-da02d1c7f827" alt="Melhor caso" width=33%>
 <img src="https://github.com/user-attachments/assets/c83fa58f-3f4d-4917-a8d7-696ab351f474" alt="Melhor caso" width=33%>
@@ -285,19 +284,19 @@ Dessa forma, apliquei para cada um dos tamanhos de vetor um teste que executava 
 
 ## Resultados
 
-### Bubble sort
+### 🫧 Bubble sort
 A variação utilizada nesse algoritmo de troca é a melhorada. Ele apresenta um **ótimo resultado para vetores ordenados**, mas quando utilizado em vetores invertidos ou aleatórios perde desempenho, além de se tornar o pior dos algoritmos de ordenação para vetores grandes, como no caso de um milhão.
 
-### Insertion sort
+### ⬇️ Insertion sort
 O insertion sort apresenta um desempenho melhor em comparação ao bubble sort, obtendo resultados em até **menos da metade do tempo**. Ele segue um padrão de comparação de `n-1`, zero trocas para vetores ordenados e `(n(n-1))/2` para vetores invertidos.
 
-### Selection sort
+### 🤏 Selection sort
 O **pior** resultado de **tempo** para **vetores ordenados** e também para **vetores pequenos**. Seu tempo de resposta é muito semelhante independente do caso, mudando apenas com a variação de tamanho do vetor e segue o mesmo padrão para todos os casos: `(n(n-1))/2` comparações e `n` trocas.
 
-### Merge sort
+### ✂️ Merge sort
 Esse tipo de ordenação é **um dos mais rápidos**. O merge sort apresenta o conceito de recursividade e cumpre muito bem seu papel. Entretanto, há uma certa **dificuldade em contabilizar as trocas** quando não é definido exatamente o que é considerado troca. Nesse algoritmo há diversas divisões em outros vetores menores que entram na contagem final, incluindo em vetores já ordenados.
 
-### Quick sort
+### 🐇 Quick sort
 Condizente com o nome, esse é o algoritmo com o **melhor tempo** de resposta. Ele também apresenta o conceito de recursividade como no merge e é ideal para grandes conjuntos de dados, como pode ser visto no comparativo.
 
 ## Referência
