@@ -47,16 +47,17 @@ char* usa_date(T_Date date){
         return NULL;
     }
 
-    sprintf(str,"%02d-%02d-%04d\n",date->year,date->month,date->day);
+    sprintf(str,"%02d-%02d-%02d\n",date->year,date->month,date->day);
     return str;
 }
 
-char* complete_date(T_Date date, char* location){
-    char* str = malloc(sizeof(char)*64);
-    if(str!=NULL){
-        sprintf(str,"%s, %02d de %s de %04d.",location,date->day,month_in_full(date->month),date->year);
+char* complete_date(T_Date date, char* location) {
+    char* string = malloc(sizeof(char) * 64);
+    if (string != NULL) {
+        sprintf(string, "%s, %02d de %s de %04d.", location, date->day, month_in_full(date->month), date->year);
     }
 
+    return string;
 }
 
 void destroy_date(T_Date* date){
@@ -64,7 +65,7 @@ void destroy_date(T_Date* date){
     *date = NULL;
 }
 
-days_in_month(int month, int year){
+int days_in_month(int month, int year){
     int days = 0;
     switch(month){
         case 1:
@@ -86,6 +87,7 @@ days_in_month(int month, int year){
             days = is_leap_year(year)?29:28;
             break;
     }
+    return days;
 }
 
 bool is_leap_year(int year){
