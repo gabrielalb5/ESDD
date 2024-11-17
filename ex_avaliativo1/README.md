@@ -6,9 +6,9 @@ Nove casos foram propostos. Foi necessário utilizar 3 tipos de vetores: ordenad
 
 A partir disso, implementei um programa em C com base nos códigos  de ordenação disponibilizados pelo professor [Ednilson](https://github.com/ednilsonrossi), com o acréscimo de contadores de comparações, trocas e tempo de execução, além de adaptações para permitir a execução no Windows manipulando a memória Heap.
 
-Dessa forma, apliquei para cada um dos tamanhos de vetor um teste que executava cada um dos casos (melhor, pior e médio) três vezes e anotei as médias que estão dispostas nas [tabelas](#%EF%B8%8F-comparativo) a seguir.
+Dessa forma, apliquei para cada um dos tamanhos de vetor um teste que executava cada um dos casos (melhor, pior e médio) três vezes e anotei as médias que estão dispostas nas [tabelas](#comparativo) a seguir.
 
-## ⚖️ Comparativo
+## Comparativo
 Resultado médio de testes com mil, 100 mil e 1 milhão de elementos com casos de vetores ordenados, invertidos e aleatórios.
 <table>
   <thead>
@@ -25,15 +25,15 @@ Resultado médio de testes com mil, 100 mil e 1 milhão de elementos com casos d
   <tbody>
     <tr>
         <td></td>
-        <td>COMPARAÇÕES</td>
-        <td>TROCAS</td>
-        <td>TEMPO (segundos)</td>
-        <td>COMPARAÇÕES</td>
-        <td>TROCAS</td>
-        <td>TEMPO (segundos)</td>
-        <td>COMPARAÇÕES</td>
-        <td>TROCAS</td>
-        <td>TEMPO (segundos)</td>
+        <td>Comparações</td>
+        <td>Trocas</td>
+        <td>Tempo (s)</td>
+        <td>Comparações</td>
+        <td>Trocas</td>
+        <td>Tempo (s)</td>
+        <td>Comparações</td>
+        <td>Trocas</td>
+        <td>Tempo (s)</td>
     </tr>
     <tr>
         <td>BUBBLE</td>
@@ -113,15 +113,15 @@ Resultado médio de testes com mil, 100 mil e 1 milhão de elementos com casos d
   <tbody>
      <tr>
         <td></td>
-        <td>COMPARAÇÕES</td>
-        <td>TROCAS</td>
-        <td>TEMPO (segundos)</td>
-        <td>COMPARAÇÕES</td>
-        <td>TROCAS</td>
-        <td>TEMPO (segundos)</td>
-        <td>COMPARAÇÕES</td>
-        <td>TROCAS</td>
-        <td>TEMPO (segundos)</td>
+        <td>Comparações</td>
+        <td>Trocas</td>
+        <td>Tempo (s)</td>
+        <td>Comparações</td>
+        <td>Trocas</td>
+        <td>Tempo (s)</td>
+        <td>Comparações</td>
+        <td>Trocas</td>
+        <td>Tempo (s)</td>
     </tr>
     <tr>
         <td>BUBBLE</td>
@@ -201,15 +201,15 @@ Resultado médio de testes com mil, 100 mil e 1 milhão de elementos com casos d
   <tbody>
     <tr>
         <td></td>
-        <td>COMPARAÇÕES</td>
-        <td>TROCAS</td>
-        <td>TEMPO (segundos)</td>
-        <td>COMPARAÇÕES</td>
-        <td>TROCAS</td>
-        <td>TEMPO (segundos)</td>
-        <td>COMPARAÇÕES</td>
-        <td>TROCAS</td>
-        <td>TEMPO (segundos)</td>
+        <td>Comparações</td>
+        <td>Trocas</td>
+        <td>Tempo (s)</td>
+        <td>Comparações</td>
+        <td>Trocas</td>
+        <td>Tempo (s)</td>
+        <td>Comparações</td>
+        <td>Trocas</td>
+        <td>Tempo (s)</td>
     </tr>
      <tr>
         <td>BUBBLE</td>
