@@ -5,4 +5,4 @@
 #define TAM 1000000
 
 void gerarCrescente(int valor_inicial, int v[]);
-int buscaSequencial(int v[], int procurado, int posicao);
+int buscaSequencial(int v[], int procurado);

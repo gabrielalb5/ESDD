@@ -2,20 +2,20 @@
 
 int main(){
     int procurado;
-    int posicao = -1;
+    int v[TAM];
+    int posicao;
 
     clock_t start, end;
     double cpu_time_used;
     
-    printf("Digite o número procurado: ");
-    scanf("%d",&procurado);
-
-    int v[TAM];
     srand(1);
     gerarCrescente(1, v);
+
+    printf("Digite o número procurado: ");
+    scanf("%d",&procurado);
     
     start = clock();
-    posicao = buscaSequencial(v,procurado,posicao);
+    posicao = buscaSequencial(v,procurado);
     end = clock();
     
     cpu_time_used = (  (double)(end - start) / CLOCKS_PER_SEC );

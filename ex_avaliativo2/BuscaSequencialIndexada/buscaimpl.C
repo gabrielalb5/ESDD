@@ -15,12 +15,13 @@ void imprimirTabela(int tabela[][2], int tamanho) {
     }
 }
 
-void dividirTabela(int original[][2], int tabela[][2], int intervalo, int qtdIndices) {
+void dividirTabela(int original[][2], int tabela[][2], int intervalo, int qtdElementos) {
     int cont = 0;
     for(int i=0;i<intervalo;i++){
-        if(i%qtdIndices == qtdIndices-1 && cont<qtdIndices){
-            tabela[cont][0] = original[i][0];
-            tabela[cont][1] = original[i][1];
+        // Resto de i == 999 e depois Resto de i == 99
+        if(i%qtdElementos == qtdElementos-1){
+            tabela[cont][0] = original[i][0]; //Posição
+            tabela[cont][1] = original[i][1]; //Valor
             cont++;
         }
     }
@@ -47,7 +48,7 @@ void busca(int tabela[][2], int tamanho, int procurado, int inicioFim[][2]){
     }
     if(procurado<=tabela[0][1]){
             inicioFim[0][0] = 0; //Indice Inicio
-            inicioFim[0][1] = 0; //Valor Inicio
+            inicioFim[0][1] = 1; //Valor Inicio
             inicioFim[1][0] = tabela[0][0]; //Indice Fim
             inicioFim[1][1] = tabela[0][1]; //Valor Fim
     }

@@ -5,7 +5,7 @@ int main() {
     bool achou;
     int original[ELEMENTOS][2];
     int tabela1[1000][2];
-    int tabela2[100][2];
+    int tabela2[10][2];
     int inicioFim[2][2];
     clock_t start, end;
     double cpu_time_used;
