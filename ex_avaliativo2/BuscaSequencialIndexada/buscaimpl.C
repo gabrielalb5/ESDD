@@ -45,7 +45,7 @@ void busca(int tabela[][2], int tamanho, int procurado, int inicioFim[][2]){
             inicioFim[1][1] = tabela[i+1][1]; //Valor Fim
         }
     }
-    if(procurado<tabela[0][1]){
+    if(procurado<=tabela[0][1]){
             inicioFim[0][0] = 0; //Indice Inicio
             inicioFim[0][1] = 0; //Valor Inicio
             inicioFim[1][0] = tabela[0][0]; //Indice Fim
