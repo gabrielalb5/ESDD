@@ -54,7 +54,7 @@ bool enqueue(T_Queue queue, T_Info element){
     }
 
     queue->last += 1;
-    queue->elements[queue->size] = element;
+    queue->elements[queue->last] = element;
     return true;
 }
 

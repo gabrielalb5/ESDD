@@ -1,5 +1,5 @@
-#include "queue.h"
 #include <stdio.h>
+#include "queue.h"
 
 int main(){
 
